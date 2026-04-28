@@ -1,20 +1,7 @@
 "use client"
 
 import React, { useRef, useState } from "react"
-import { Metadata } from "next"
 import styles from "./page.module.css"
-
-export const metadata: Metadata = {
-  title: 'DSAT AI Solver – Analyze Questions, Traps & Improve Your Score',
-  description: 'Get 1500+ on DSAT with AI Trap Analysis | DSAT Prep AI',
-  openGraph: {
-    title: "DSAT AI Solver",
-    description: "Solve DSAT questions with trap analysis and score improvement strategies.",
-    url: "https://dsatprep-frontend.vercel.app",
-    siteName: "DSAT Prep AI",
-    type: "website",
-  },
-}
 
 interface SolveResult {
   section: string;
