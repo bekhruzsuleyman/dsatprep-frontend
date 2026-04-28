@@ -1,7 +1,20 @@
 "use client"
 
 import React, { useRef, useState } from "react"
+import { Metadata } from "next"
 import styles from "./page.module.css"
+
+export const metadata: Metadata = {
+  title: 'DSAT AI Solver – Analyze Questions, Traps & Improve Your Score',
+  description: 'Get 1500+ on DSAT with AI Trap Analysis | DSAT Prep AI',
+  openGraph: {
+    title: "DSAT AI Solver",
+    description: "Solve DSAT questions with trap analysis and score improvement strategies.",
+    url: "https://dsatprep-frontend.vercel.app",
+    siteName: "DSAT Prep AI",
+    type: "website",
+  },
+}
 
 interface SolveResult {
   section: string;
@@ -61,8 +74,8 @@ export default function Home() {
       <div className={styles.card_wrapper}>
         <div className={styles.card}>
           <div className={styles.card_overview}>
-            <h1 className={styles.card_title}>DSAT Platform</h1>
-            <p className={styles.card_description}>Solve any DSAT question with Artificial Intelligence (AI)</p>
+            <h1 className={styles.card_title}>Master DSAT Questions with AI Trap Analysis</h1>
+            <p className={styles.card_description}>Paste any DSAT question, choose your answer, and get the correct answer, explanation, trap type, and strategy to avoid the same mistake again.</p>
           </div>
 
           <div className={styles.card_request_field}>
@@ -81,7 +94,7 @@ export default function Home() {
                 <label htmlFor="user_answer">Your Answer:</label>
                 <input ref={userAnswer} type="text" id="user_answer" placeholder="Enter your answer..." />
               </div>
-              <button className={styles.solve_ai} onClick={handleSolve} disabled={loading}>{ loading ? "Thinking" : 'Solve AI' }</button>
+              <button className={styles.solve_ai} onClick={handleSolve} disabled={loading}>{ loading ? "Analyzing" : 'Analyze Question' }</button>
             </div>
           </div>
         </div>
