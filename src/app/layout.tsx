@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
@@ -11,6 +12,7 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
   return (
     <html>
       <body>
+        <Analytics/>
         {children}
       </body>
     </html>
